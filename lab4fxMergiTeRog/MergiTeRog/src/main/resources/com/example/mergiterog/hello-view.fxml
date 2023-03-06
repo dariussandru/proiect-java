@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mergiterog.Controller.LoginAccountController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: #0598ff" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="176.0" fitWidth="193.0" layoutX="18.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/twitterLogo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="800.0" prefWidth="775.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="userMailTextField" layoutX="86.0" layoutY="138.0" promptText="User Name" style="-fx-background-radius: 10;" />
+            <PasswordField fx:id="passwordPasswordField" layoutX="86.0" layoutY="184.0" promptText="Password" style="-fx-background-radius: 10;" />
+            <Button fx:id="loginButton" layoutX="134.0" layoutY="224.0" mnemonicParsing="false" onAction="#login" style="-fx-background-radius: 10;" text="Login" />
+            <Button fx:id="closeButton" layoutX="289.0" layoutY="6.0" mnemonicParsing="false" onAction="#closeButtonAction" style="-fx-background-color: transparent;" text="X">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Button>
+
+            <Text layoutX="110.0" layoutY="104.0" nodeOrientation="LEFT_TO_RIGHT" strokeLineCap="ROUND" strokeWidth="0.0" text="Users login" wrappingWidth="101.094970703125">
+               <cursor>
+                  <Cursor fx:constant="W_RESIZE" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="loginMassageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="111.0" prefHeight="18.0" prefWidth="233.0" textAlignment="CENTER" textFill="#f40606" />
+            <Button fx:id="createAccount" layoutX="106.0" layoutY="300.0" mnemonicParsing="false" onAction="#onClickCreateAccount" style="-fx-background-radius: 10;" text="Create Account" />
+            <ImageView fitHeight="48.0" fitWidth="45.0" layoutX="136.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/users.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+
+</BorderPane>
